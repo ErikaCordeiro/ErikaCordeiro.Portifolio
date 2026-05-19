@@ -53,6 +53,12 @@ python manage.py runserver
 
 Acesse: http://127.0.0.1:8000
 
+## Blueprint Render
+
+O repositório inclui `render.yaml`. No Render, escolha Blueprint, branch `main` e deixe o Blueprint Path como `render.yaml`.
+
+Durante a criação, preencha as variáveis marcadas como secretas: `CONTACT_EMAIL`, `DEFAULT_FROM_EMAIL`, `EMAIL_HOST_USER` e `EMAIL_HOST_PASSWORD`.
+
 ## Deploy em produção
 
 Configure no serviço de hospedagem:
@@ -76,7 +82,6 @@ Start command:
 gunicorn config.wsgi:application
 ```
 
-
 ## Email do formulário
 
 Em produção, configure SMTP nas variáveis de ambiente do Render:
@@ -94,6 +99,7 @@ EMAIL_HOST_PASSWORD=sua-senha-de-app
 ```
 
 Para Gmail, use uma **senha de app**, não a senha normal da conta.
+
 ## Estrutura
 
 ```text
@@ -103,6 +109,7 @@ portfolio/
 ├── .env.example
 ├── .gitignore
 ├── Procfile
+├── render.yaml
 ├── runtime.txt
 ├── README.md
 ├── config/
@@ -122,4 +129,3 @@ portfolio/
 - Em produção, use `DEBUG=False`.
 - Atualize `ALLOWED_HOSTS` e `CSRF_TRUSTED_ORIGINS` com o domínio real.
 - O banco local usa SQLite; para produção com dados persistentes, considere PostgreSQL.
-
