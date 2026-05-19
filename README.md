@@ -76,6 +76,24 @@ Start command:
 gunicorn config.wsgi:application
 ```
 
+
+## Email do formulário
+
+Em produção, configure SMTP nas variáveis de ambiente do Render:
+
+```env
+CONTACT_EMAIL=email-que-vai-receber-as-mensagens@gmail.com
+DEFAULT_FROM_EMAIL=seu-email@gmail.com
+EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_USE_SSL=False
+EMAIL_HOST_USER=seu-email@gmail.com
+EMAIL_HOST_PASSWORD=sua-senha-de-app
+```
+
+Para Gmail, use uma **senha de app**, não a senha normal da conta.
 ## Estrutura
 
 ```text
@@ -104,3 +122,4 @@ portfolio/
 - Em produção, use `DEBUG=False`.
 - Atualize `ALLOWED_HOSTS` e `CSRF_TRUSTED_ORIGINS` com o domínio real.
 - O banco local usa SQLite; para produção com dados persistentes, considere PostgreSQL.
+
