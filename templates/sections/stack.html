@@ -1,0 +1,54 @@
+﻿<section class="section stack" id="stack">
+  <div class="container stack__layout">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Stack</span>
+      <h2>Tecnologias para criar sistemas web inteligentes e escaláveis.</h2>
+      <p class="stack__intro">Uma base prática para transformar rotinas, dados e atendimento em produtos digitais claros, úteis e publicados.</p>
+    </div>
+
+    <div class="stack-showcase reveal">
+      <div class="stack-showcase__header">
+        <span>core toolkit</span>
+        <strong>produção real</strong>
+      </div>
+
+      <div class="stack-radar" aria-hidden="true">
+        <span class="stack-radar__ring"></span>
+        <span class="stack-radar__ring stack-radar__ring--middle"></span>
+        <span class="stack-radar__ring stack-radar__ring--inner"></span>
+        <span class="stack-radar__dot stack-radar__dot--one">Py</span>
+        <span class="stack-radar__dot stack-radar__dot--two">API</span>
+        <span class="stack-radar__dot stack-radar__dot--three">JS</span>
+        <span class="stack-radar__dot stack-radar__dot--four">DB</span>
+      </div>
+
+      <div class="stack__cloud">
+        {% for tech in tech_stack %}<span>{{ tech }}</span>{% endfor %}
+      </div>
+    </div>
+
+    <div class="stack-details reveal">
+      <article>
+        <span>01</span>
+        <strong>Backend e lógica</strong>
+        <p>Python com Django, FastAPI e Flask para sistemas organizados, APIs rápidas e aplicações fáceis de evoluir.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <strong>Interface e experiência</strong>
+        <p>HTML, CSS e JavaScript para produtos rápidos, responsivos e elegantes.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <strong>Automação e dados</strong>
+        <p>PostgreSQL, MySQL e fluxos inteligentes para reduzir trabalho manual e melhorar decisões.</p>
+      </article>
+    </div>
+
+    <div class="study-panel reveal">
+      <span class="eyebrow">Atualmente estudando</span>
+      {% for item in study_items %}<p>{{ item }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
+

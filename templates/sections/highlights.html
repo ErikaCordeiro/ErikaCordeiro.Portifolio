@@ -1,0 +1,18 @@
+﻿<section class="section" id="destaques">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Destaques</span>
+      <h2>Experiências que conectam tecnologia, comunicacao e negocio.</h2>
+    </div>
+    <div class="card-grid card-grid--five">
+      {% for title, text, icon in highlights %}
+        <article class="glass-card tilt-card reveal">
+          <div class="glass-card__icon">{{ icon }}</div>
+          <h3>{{ title }}</h3>
+          <p>{{ text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

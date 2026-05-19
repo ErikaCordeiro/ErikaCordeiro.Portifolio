@@ -1,0 +1,17 @@
+﻿<section class="section timeline" id="timeline">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Timeline</span>
+      <h2>Uma evolução guiada por curiosidade, prática e criatividade tecnica.</h2>
+    </div>
+    <div class="timeline__list">
+      {% for moment, text in timeline %}
+        <article class="timeline__item reveal">
+          <span>{{ moment }}</span>
+          <p>{{ text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

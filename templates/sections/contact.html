@@ -1,0 +1,29 @@
+﻿<section class="section contact" id="contato">
+  <div class="container contact__grid">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Contato</span>
+      <h2>Vamos transformar uma ideia complexa em uma solucao clara.</h2>
+      <div class="contact__links">
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:contato@erikacordeiro.dev">Email</a>
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+    </div>
+    <form class="contact-form reveal" method="post" novalidate>
+      {% csrf_token %}
+      {% if messages %}
+        <div class="form-alerts">{% for message in messages %}<p>{{ message }}</p>{% endfor %}</div>
+      {% endif %}
+      {% for field in form %}
+        <label>
+          <span>{{ field.label }}</span>
+          {{ field }}
+          {% for error in field.errors %}<small>{{ error }}</small>{% endfor %}
+        </label>
+      {% endfor %}
+      <button class="btn btn--primary" type="submit">Enviar mensagem</button>
+    </form>
+  </div>
+</section>
+

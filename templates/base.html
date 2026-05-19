@@ -1,0 +1,47 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio premium de Érika Cordeiro, desenvolvedora Python, Django, IA, automação e sistemas web inteligentes.">
+  <meta name="keywords" content="Érika Cordeiro, Python, Django, IA, automação, desenvolvedora, portfolio, sistemas web">
+  <meta name="author" content="Érika Cordeiro">
+  <meta property="og:title" content="Érika Cordeiro | Desenvolvedora Python e IA">
+  <meta property="og:description" content="Soluções digitais inteligentes com Python, IA e automação.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{% static 'images/og-cover.svg' %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Érika Cordeiro | Portfolio Premium">
+  <meta name="twitter:description" content="Desenvolvedora focada em sistemas inteligentes, experiência digital e automação.">
+  <title>{% block title %}Érika Cordeiro | Python, IA e Automação{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'images/favicon.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}?v=metal-20260519">
+  <link rel="stylesheet" href="{% static 'css/layout.css' %}?v=metal-20260519">
+  <link rel="stylesheet" href="{% static 'css/components.css' %}?v=metal-20260519">
+  <link rel="stylesheet" href="{% static 'css/sections.css' %}?v=metal-20260519">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}?v=metal-20260519">
+</head>
+<body>
+  {% include 'components/loader.html' %}
+  {% include 'components/cursor.html' %}
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  {% include 'components/navbar.html' %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {% include 'components/footer.html' %}
+  <script src="{% static 'js/particles.js' %}?v=metal-20260519" defer></script>
+  <script src="{% static 'js/cursor.js' %}?v=metal-20260519" defer></script>
+  <script src="{% static 'js/reveal.js' %}?v=metal-20260519" defer></script>
+  <script src="{% static 'js/typing.js' %}?v=metal-20260519" defer></script>
+  <script src="{% static 'js/stats.js' %}?v=metal-20260519" defer></script>
+  <script src="{% static 'js/contact.js' %}?v=metal-20260519" defer></script>
+  <script src="{% static 'js/main.js' %}?v=metal-20260519" defer></script>
+</body>
+</html>
+
+

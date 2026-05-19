@@ -1,0 +1,21 @@
+﻿<section class="section about" id="sobre">
+  <div class="container split">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Sobre mim</span>
+      <h2>Uma desenvolvedora com olhar analítico, criativo e orientado a impacto.</h2>
+    </div>
+    <div class="about__text reveal">
+      <p>Sou estudante de Ciência da Computacao e desenvolvedora apaixonada por tecnologia desde que comecei a programar durante a pandemia. Minha trajetoria une raciocinio tecnico, criatividade e vivencia real em logística e SAC, areas que fortaleceram minha capacidade de entender problemas, organizar fluxos e entregar soluções uteis.</p>
+      <p>Atuo com automacoes, inteligencia artificial e sistemas web, sempre buscando transformar processos complexos em experiências digitais claras, modernas e eficientes. Meu perfil combina investigacao, execucao e uma vontade constante de construir tecnologia que realmente melhora rotinas.</p>
+      <div class="stats-grid">
+        {% for value, label in stats %}
+          <article class="stat-card">
+            <strong data-stat="{{ value }}">0</strong>
+            <span>{{ label }}</span>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
